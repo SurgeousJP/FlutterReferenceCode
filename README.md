@@ -1,6 +1,6 @@
-# untitled
+# Flutter refence code
 
-A new Flutter project.
+A new Flutter project, for the sole purpose is to be referenced in the future
 
 ## Getting Started
 
