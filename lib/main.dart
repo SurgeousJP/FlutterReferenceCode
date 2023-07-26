@@ -26,51 +26,22 @@ class Home extends StatelessWidget {
           centerTitle: true,
           backgroundColor: Colors.orange[200]
       ),
-      body: Center(
-          // // Text Widget
-
-          // child: Text(
-          //     "Hello, let's try our best to make our dreams come true",
-          //     textAlign: TextAlign.justify,
-          //     style: TextStyle(
-          //         fontSize: 30.0,
-          //         fontWeight: FontWeight.bold,
-          //         letterSpacing: 2.0,
-          //         color: Colors.black87,
-          //         fontFamily: 'Londrina Solid'
-          //     )
-          // )
-
-        // // Image Widget
-
-        // * NetworkImage
-        // child: Image(
-        //   image: NetworkImage('https://drive.google.com/uc?id=1FgVvaKZEAP6fU2cWjPTD-4A6RS95Rcv8')
-        // ),
-
-        // * AssetImage
-        // List the file in assets in pubspec.yaml
-        // child: Image(
-        //   image: AssetImage('assets/ganyu.jpg'),
-        // ),
-        // Or list the directory and get it straight
-        // (It could apply the same to network)
-        // child: Image.asset('assets/ganyu.jpg')
-
-        // // Button and Icon Widget
-
-        // child: ElevatedButton.icon(
-        //   onPressed: () {
-        //     print('You clicked me, I wonder if i should love you :))');
-        //   },
-        //   icon: Icon(
-        //     Icons.mail,
-        //   ),
-        //   label: Text('Mail me pls !'),
-        //   style: ElevatedButton.styleFrom(
-        //     backgroundColor: Colors.amber
-        //   ),
-        // ),
+      body: Container(
+        // Padding: The distance between the content and its boundary
+        padding: EdgeInsets.all(20.0),
+        // Margin: The distance between the boundary to another one
+        margin: EdgeInsets.all(20.0),
+        color: Colors.orange[200],
+        child: Text(
+          'Hello to the world',
+          style: TextStyle(
+            fontSize: 20.0,
+            fontWeight: FontWeight.bold,
+            letterSpacing: 2.0,
+            color: Colors.black87,
+            fontFamily: "LondrinaSolid"
+          )
+        )
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {  },
