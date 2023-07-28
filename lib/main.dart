@@ -26,23 +26,36 @@ class Home extends StatelessWidget {
           centerTitle: true,
           backgroundColor: Colors.orange[200]
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        crossAxisAlignment: CrossAxisAlignment.center,
+      body: Row(
         children: <Widget>[
-          Text('Hello World'),
-          TextButton(
-              onPressed: (){},
-              style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all(Colors.amber),
-              ),
-              child: Text('Click me pls'),
+          Expanded(
+            flex: 3,
+              child: Image.asset('assets/ganyu.jpg'),
           ),
-          Container(
-            color: Colors.cyan,
-            padding: EdgeInsets.all(20.0),
-            child: Text('Inside the container')
-          )
+          Expanded(
+            flex: 1,
+              child: Container(
+                padding: EdgeInsets.all(20.0),
+                color: Colors.cyan,
+                child: Text('1'),
+              )
+          ),
+          Expanded(
+              flex: 1,
+              child: Container(
+                padding: EdgeInsets.all(20.0),
+                color: Colors.amber,
+                child: Text('1'),
+              )
+          ),
+          Expanded(
+              flex: 1,
+              child: Container(
+                padding: EdgeInsets.all(20.0),
+                color: Colors.orange[200],
+                child: Text('1'),
+              )
+          ),
         ],
       ),
       floatingActionButton: FloatingActionButton(
