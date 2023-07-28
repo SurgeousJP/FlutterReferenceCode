@@ -26,7 +26,7 @@ class Home extends StatelessWidget {
           centerTitle: true,
           backgroundColor: Colors.orange[200]
       ),
-      body: Row(
+      body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
