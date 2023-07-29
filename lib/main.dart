@@ -1,67 +1,36 @@
 import 'package:flutter/material.dart';
 
 void main() => runApp(MaterialApp(
-  home: Home()
+  home: AwesomeQuotes()
 ));
 
-// So you kinda can have some kind of keyword
-// to generate you code automatically (stless and [Tab] is an example)
-class Home extends StatelessWidget {
-  const Home({super.key});
+class AwesomeQuotes extends StatefulWidget {
+  const AwesomeQuotes({super.key});
+
+  @override
+  State<AwesomeQuotes> createState() => _AwesomeQuotesState();
+}
+
+class _AwesomeQuotesState extends State<AwesomeQuotes> {
+
+  List<String> quotes = [
+    'Be yourself; everyone else is already taken',
+    'I have nothing to declare except my genius',
+    'The truth is rarely pure and never simple'
+  ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey[200],
       appBar: AppBar(
-          title: Text(
-            'My first flutter application',
-            style: TextStyle(
-                fontSize: 20.0,
-                fontWeight: FontWeight.bold,
-                letterSpacing: 2.0,
-                color: Colors.black,
-                fontFamily: 'LondrinaSolid'
-            ),
-          ),
-          centerTitle: true,
-          backgroundColor: Colors.orange[200]
+        title: Text('Awesome Quotes'),
+        centerTitle: true,
+        backgroundColor: Colors.redAccent,
       ),
-      body: Row(
-        children: <Widget>[
-          Expanded(
-            flex: 3,
-              child: Image.asset('assets/ganyu.jpg'),
-          ),
-          Expanded(
-            flex: 1,
-              child: Container(
-                padding: EdgeInsets.all(20.0),
-                color: Colors.cyan,
-                child: Text('1'),
-              )
-          ),
-          Expanded(
-              flex: 1,
-              child: Container(
-                padding: EdgeInsets.all(20.0),
-                color: Colors.amber,
-                child: Text('1'),
-              )
-          ),
-          Expanded(
-              flex: 1,
-              child: Container(
-                padding: EdgeInsets.all(20.0),
-                color: Colors.orange[200],
-                child: Text('1'),
-              )
-          ),
-        ],
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {  },
-        backgroundColor: Colors.orange[200],
-        child: Text('click me pls'),
+      body: Column(
+        children: quotes.map((quote) => Text(quote)).toList(),
+
       ),
     );
   }
